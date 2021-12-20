@@ -24,6 +24,19 @@ namespace _04_CompanyOutings
             return _outings;
         }
 
+        public List<Outings> GetOutingsByType(EventType eventType)
+        {
+            List<Outings> foundOutings = new List<Outings>();
+            foreach (Outings outing in _outings)
+            {
+                if (outing.EventType == eventType)
+                {
+                    foundOutings.Add(outing);
+                }
+            }
+            return foundOutings;
+        }
+
         public int GetTotalOutingsCost()
         {
             int totalCost = 0;

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_KomodoCafe.UI", "01_Komo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_CompanyOutings.Repository", "04_CompanyOutings\04_CompanyOutings.Repository.csproj", "{129F86D3-54BF-40B9-ABCB-2BEB5B4E8E1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_CompanyOutings.UI", "04_CompanyOutings.UI\04_CompanyOutings.UI.csproj", "{55DE9622-3CA2-4851-92D4-D009F45556E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{129F86D3-54BF-40B9-ABCB-2BEB5B4E8E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{129F86D3-54BF-40B9-ABCB-2BEB5B4E8E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{129F86D3-54BF-40B9-ABCB-2BEB5B4E8E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55DE9622-3CA2-4851-92D4-D009F45556E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55DE9622-3CA2-4851-92D4-D009F45556E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55DE9622-3CA2-4851-92D4-D009F45556E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55DE9622-3CA2-4851-92D4-D009F45556E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
