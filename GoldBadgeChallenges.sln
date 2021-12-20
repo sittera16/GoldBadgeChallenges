@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_KomodoCafe.Repository", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_KomodoCafe.UI", "01_KomodoCafe.UI\01_KomodoCafe.UI.csproj", "{8BCC65AB-5BE0-4BF2-B001-E4F8B9193271}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_CompanyOutings", "04_CompanyOutings\04_CompanyOutings.csproj", "{129F86D3-54BF-40B9-ABCB-2BEB5B4E8E1C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04_CompanyOutings.Repository", "04_CompanyOutings\04_CompanyOutings.Repository.csproj", "{129F86D3-54BF-40B9-ABCB-2BEB5B4E8E1C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
