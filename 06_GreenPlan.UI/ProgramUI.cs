@@ -56,7 +56,7 @@ namespace _06_GreenPlan.UI
                         UpdateAnExistingVehicle();
                         break;
                     case "6":
-                        DeleteAnExistingDevelioer();
+                        DeleteAnExistingVehicle();
                         break;
                     case "500":
                         isRunning = false;
@@ -94,6 +94,11 @@ namespace _06_GreenPlan.UI
             string engineString = Console.ReadLine();
             int engineNumber = Convert.ToInt32(engineString);
             vehicle.EngineType = (EngineType)engineNumber;
+
+            Console.Write("Please enter vehicle's MPG rating: ");
+            string vehicleMPG = Console.ReadLine();
+            int vehicleMPGNum = Convert.ToInt32(vehicleMPG);
+            vehicle.Year = vehicleMPGNum;
 
             _vehicleRepo.AddVehicleToDirectory(vehicle);
         }
@@ -155,6 +160,8 @@ namespace _06_GreenPlan.UI
                 DisplayVehicleDetails(vehicle);
             }
 
+            Console.WriteLine($"The current average MPG of all vehicles with {engineTypeNum} engines is {_vehicleRepo.GetAverageMPGByEngineType(engineTypeNum)}\n" +
+                $"======================================================================= ");
             WaitForKey();
         }
 
@@ -193,6 +200,11 @@ namespace _06_GreenPlan.UI
             int engineTypeNum = Convert.ToInt32(engineTypeString);
             vehicle.EngineType = (EngineType)engineTypeNum;
 
+            Console.WriteLine("What is the correct vehicle MPG rating?");
+            string vehicleMPGString = Console.ReadLine();
+            int vehicleMPGInt = Convert.ToInt32(vehicleMPGString);
+            vehicle.Year = vehicleMPGInt;
+
             _vehicleRepo.UpdateExistingVehicle(userInput, vehicle);
 
             Console.Clear();
@@ -202,7 +214,7 @@ namespace _06_GreenPlan.UI
         }
 
 
-        private void DeleteAnExistingDevelioer()
+        private void DeleteAnExistingVehicle()
         {
             Console.Clear();
             Console.WriteLine("Which vehicle would you like to remove?");
@@ -243,6 +255,7 @@ namespace _06_GreenPlan.UI
         {
             Console.WriteLine($"{vehicle.ID}.) {vehicle.VehicleName}\n" +
                 $"Engine Type: {vehicle.EngineType}\n" +
+                $"MPG Rating: {vehicle.VehicleMPG}\n" +
                 $"=======================================================================");
         }
 
@@ -258,6 +271,7 @@ namespace _06_GreenPlan.UI
             lamboHuracan.Model = "Huracan";
             lamboHuracan.Year = 2020;
             lamboHuracan.EngineType = EngineType.Gas;
+            lamboHuracan.VehicleMPG = 15;
             _vehicleRepo.AddVehicleToDirectory(lamboHuracan);
 
             Vehicles jeepWrangler = new Vehicles();
@@ -265,6 +279,7 @@ namespace _06_GreenPlan.UI
             jeepWrangler.Model = "Wrangler";
             jeepWrangler.Year = 2019;
             jeepWrangler.EngineType = EngineType.Gas;
+            jeepWrangler.VehicleMPG = 18;
             _vehicleRepo.AddVehicleToDirectory(jeepWrangler);
 
             Vehicles mclarenP1 = new Vehicles();
@@ -272,6 +287,7 @@ namespace _06_GreenPlan.UI
             mclarenP1.Model = "P1";
             mclarenP1.Year = 2015;
             mclarenP1.EngineType = EngineType.Hybrid;
+            mclarenP1.VehicleMPG = 17;
             _vehicleRepo.AddVehicleToDirectory(mclarenP1);
 
             Vehicles rimacNevera = new Vehicles();
@@ -279,6 +295,7 @@ namespace _06_GreenPlan.UI
             rimacNevera.Model = "Nevera";
             rimacNevera.Year = 2021;
             rimacNevera.EngineType = EngineType.Electric;
+            rimacNevera.VehicleMPG = 96;
             _vehicleRepo.AddVehicleToDirectory(rimacNevera);
 
         }

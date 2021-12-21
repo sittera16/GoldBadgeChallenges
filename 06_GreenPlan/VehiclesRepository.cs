@@ -66,6 +66,7 @@ namespace _06_GreenPlan
                 oldVehicle.Model = vehicle.Model;
                 oldVehicle.Year = vehicle.Year;
                 oldVehicle.EngineType = vehicle.EngineType;
+                oldVehicle.VehicleMPG = vehicle.VehicleMPG;
                 return true;
             }
             else
@@ -78,6 +79,31 @@ namespace _06_GreenPlan
         {
             bool deleteVehicle = _vehicles.Remove(existingVehicle);
             return deleteVehicle;
+        }
+
+        public decimal GetTotalNumberOfVehiclesByEngineType(EngineType engineType)
+        {
+            int vehicleCount = 0;
+            foreach (Vehicles vehicle in _vehicles)
+                if (vehicle.EngineType == engineType) vehicleCount++;
+            decimal vehicleCountDec = Convert.ToDecimal(vehicleCount);
+            return vehicleCountDec;
+        }
+
+        public decimal GetAverageMPGByEngineType(EngineType engineType)
+        {
+            decimal totalMPG = 0m;
+            decimal averageMPG = 0m;
+            List<Vehicles> vehicles = GetAllVehiclesList();
+            foreach (Vehicles vehicle in vehicles)
+            {
+                if (vehicle.EngineType == engineType)
+                {
+                    totalMPG += vehicle.VehicleMPG;
+                    averageMPG = totalMPG / GetTotalNumberOfVehiclesByEngineType(engineType);
+                }
+            }
+            return averageMPG;
         }
     }
 }

@@ -101,10 +101,9 @@ namespace _01_KomodoCafe.UI
 
         private void DisplayMenuItemList(MenuItems menuItem)
         {
-            Console.WriteLine($"{menuItem.MealNumber} ({menuItem.MealName})\n" +
-                $"{menuItem.MealDescription}\n" +
-                $"{menuItem.MealIngredients}\n" +
-                $"${menuItem.MealPrice}\n" +
+            Console.WriteLine($"{menuItem.MealNumber}.) {menuItem.MealName} - { menuItem.MealDescription}\n" +
+                $"Ingredients: {menuItem.MealIngredients}\n" +
+                $"Price: ${menuItem.MealPrice}\n" +
                 $"=======================================================================");
         }
 

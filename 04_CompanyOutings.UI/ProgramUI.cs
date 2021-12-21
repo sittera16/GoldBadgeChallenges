@@ -147,21 +147,21 @@ namespace _04_CompanyOutings.UI
             Outings golfOuting = new Outings();
             golfOuting.EventType = EventType.Golf;
             golfOuting.AttendeeCount = 55;
-            golfOuting.Date = new DateTime (2020/10/10);
+            golfOuting.Date = new DateTime (2020, 10, 10);
             golfOuting.EventCost = 15000;
             _outingRepo.AddOutingtoDirectory(golfOuting);
 
             Outings concertOuting = new Outings();
             concertOuting.EventType = EventType.Golf;
             concertOuting.AttendeeCount = 80;
-            concertOuting.Date = new DateTime (2020/11/11);
+            concertOuting.Date = new DateTime (2020, 11, 11);
             concertOuting.EventCost = 25000;
             _outingRepo.AddOutingtoDirectory(concertOuting);
 
             Outings parkOuting = new Outings();
             parkOuting.EventType = EventType.AmusementPark;
             parkOuting.AttendeeCount = 100;
-            parkOuting.Date = new DateTime (2020/12/12);
+            parkOuting.Date = new DateTime (2020, 12, 12);
             parkOuting.EventCost = 30000;
             _outingRepo.AddOutingtoDirectory(parkOuting);
         }

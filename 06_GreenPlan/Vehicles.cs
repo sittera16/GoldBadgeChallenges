@@ -19,13 +19,14 @@ namespace _06_GreenPlan
 
         }
 
-        public Vehicles (int id, string make, string model, double year, EngineType engineType)
+        public Vehicles (int id, string make, string model, double year, EngineType engineType, decimal vehicleMPG)
         {
             ID = id;
             Make = make;
             Model = model;
             Year = year;
             EngineType = engineType;
+            VehicleMPG = vehicleMPG;
         }
 
         public int ID { get; set; }
@@ -40,5 +41,6 @@ namespace _06_GreenPlan
                 return $"{Year} {Make} {Model}";
             }
         }
+        public decimal VehicleMPG { get; set; }
     }
 }
